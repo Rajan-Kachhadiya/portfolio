@@ -36,7 +36,7 @@ export default function Navigation() {
                 </div>
             ))}
             <div>
-                <Link href="#" className="relative z-[2] text-secondary p-20 rounded-md bg-gradient-box shadow-shadow-white transition duration-300 before:transition before:duration-300 before:absolute before:content-[''] before:left-0 before:top-0 before:w-full before:h-full before:bg-gradient-box-hover before:z-[-1] before:rounded-md before:opacity-0 hover:before:opacity-100 hover:bg-none hover:text-white">
+                <Link href="#" className="relative inline-block z-[2] text-secondary px-20 py-15 rounded-md bg-gradient-box shadow-shadow-white transition-all duration-[0.4s] before:transition-all before:duration-[0.4s] before:absolute before:content-[''] before:left-0 before:top-0 before:w-full before:h-full before:bg-gradient-box-hover before:z-[-1] before:rounded-md before:opacity-0 hover:before:opacity-100 hover:text-white hover:translate-y-[-3px]">
                     Contact
                 </Link>
             </div>
