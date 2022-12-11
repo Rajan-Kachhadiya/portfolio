@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
 
   content: [
@@ -9,15 +11,19 @@ module.exports = {
 
   theme: {
     fontSize: {
-      base: ['16px', '30px'],
+      base: ['16px', '26px'],
     },
     extend: {
+      fontFamily: {
+        'sans': ['Montserrat', ...defaultTheme.fontFamily.sans],
+      },
       colors: {
         'white': '#fff',
         'black': '#000',
-        'primary': '#1e2125',
+        'gray': '#dce1e4',
+        'light-black': '#1e2125',
         'secondary': '#ff014f',
-        'light-black': '#3c3e41',
+        'primary': '#3c3e41',
         'body-color': '#ECF0F3',
       },
       backgroundImage: {
@@ -45,14 +51,14 @@ module.exports = {
         sm: '640px',
         md: '768px',
         lg: '1024px',
-        xl: '1400px',
+        xl: '1350px',
       },
     },
     screens: {
       sm: '640px',
       md: '768px',
       lg: '1024px',
-      xl: '1400px',
+      xl: '1350px',
     },
   },
 

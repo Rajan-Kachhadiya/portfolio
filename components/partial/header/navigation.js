@@ -10,11 +10,11 @@ export default function Navigation() {
         },
         {
             name: "Features",
-            url: "#",
+            url: "#features",
         },
         {
             name: "Portfolio",
-            url: "#",
+            url: "#portfolio",
         },
         {
             name: "Resume",
@@ -27,10 +27,10 @@ export default function Navigation() {
     ]
 
     return (
-        <div className="flex items-center gap-30 uppercase font-medium text-[13px] leading-[20px]">
+        <div className="flex items-center gap-30">
             {navigationItem.map((item, key) => (
                 <div key={key}>
-                    <Link href={item.url}>
+                    <Link href={item.url} className="uppercase font-semibold text-[13px] leading-[20px]">
                         {item.name}
                     </Link>
                 </div>

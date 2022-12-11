@@ -5,9 +5,8 @@ import MobileNavigation from "./mobileNavigation";
 
 export default function Header() {
     return (
-        <div className="container py-20 flex items-center justify-between gap-30">
+        <div className="md:py-20 md:px-50 p-15 flex items-center justify-between gap-30 sticky top-0 bg-body-color z-50">
             <Logo />
-            {/* RJ7878 */}
             <div className="lg:block hidden">
                 <Navigation />
             </div>
