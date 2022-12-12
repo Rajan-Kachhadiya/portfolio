@@ -1,23 +1,39 @@
+import Image from "next/image";
 import React from "react";
-import { CloseIcon, MenuIcon } from "../icons";
+import { PortfolioImage1 } from "/public/images";
 
 export default function Portfolio() {
 
     const portfolioItem = [
         {
-            icon: MenuIcon,
-            title: "Business Stratagy",
-            content: "I throw myself down among the tall grass by the stream as I lie close to the earth.",
+            image: PortfolioImage1,
+            title: "The services provide for design",
+            content: "DEVELOPMENT",
         },
         {
-            icon: CloseIcon,
-            title: "App Development",
-            content: "It uses a dictionary of over 200 Latin words, combined with a handful of model sentence.",
+            image: PortfolioImage1,
+            title: "Mobile app landing design & app maintain",
+            content: "APPLICATION",
         },
         {
-            icon: MenuIcon,
+            image: PortfolioImage1,
+            title: "Logo design creativity & Application",
+            content: "PHOTOSHOP",
+        },
+        {
+            image: PortfolioImage1,
             title: "Business Stratagy",
-            content: "I throw myself down among the tall grass by the stream as I lie close to the earth.",
+            content: "DEVELOPMENT",
+        },
+        {
+            image: PortfolioImage1,
+            title: "APPLICATION",
+            content: "APPLICATION",
+        },
+        {
+            image: PortfolioImage1,
+            title: "Business Stratagy",
+            content: "PHOTOSHOP",
         },
     ]
 
@@ -29,20 +45,20 @@ export default function Portfolio() {
             <div className="section-title mb-50 text-center">
                 My Portfolio
             </div>
-            <div className="grid grid-cols-3 gap-30">
-                {/* {portfolioItem.map((item, key) => (
-                    <div key={key} className="features-item-box p-50 cursor-pointer bg-gradient-box shadow-shadow-white rounded-[10px] relative inline-block w-full z-[2] text-secondary transition-all duration-[0.4s] before:transition-all before:duration-[0.4s] before:absolute before:content-[''] before:left-0 before:top-0 before:w-full before:h-full before:bg-gradient-box-hover before:z-[-1] before:rounded-md before:opacity-0 hover:before:opacity-100 hover:text-white hover:translate-y-[-3px]">
-                        <div className="mb-30">
-                            <item.icon />
+            <div className="grid grid-cols-3 gap-x-30 gap-y-50">
+                {portfolioItem.map((item, key) => (
+                    <div key={key} className="portfolio-item-box group p-30 cursor-pointer bg-gradient-box shadow-shadow-white rounded-[20px]">
+                        <div className="mb-20 rounded-[10px] overflow-hidden">
+                            <Image className="group-hover:scale-110 transition duration-[0.4s]" src={item.image} width="355" height="266" alt="Portfolio Image" priority />
                         </div>
-                        <div className="mb-20 text-[24px] leading-[32px] font-semibold">
-                            {item.title}
-                        </div>
-                        <div>
+                        <div className="mb-10 text-[12px] tracking-[1px] font-medium text-secondary">
                             {item.content}
                         </div>
+                        <div className="text-[24px] leading-[32px] font-semibold">
+                            {item.title}
+                        </div>
                     </div>
-                ))} */}
+                ))}
             </div>
         </div>
     )

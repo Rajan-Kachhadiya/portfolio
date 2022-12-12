@@ -3,5 +3,6 @@ import CloseIcon from "./closeIcon"
 import LinkedinIcon from "./linkedinIcon"
 import GithubIcon from "./githubIcon"
 import SkypeIcon from "./skypeIcon"
+import ArrowUpIcon from "./arrowUpIcon";
 
-export { MenuIcon, CloseIcon, LinkedinIcon, GithubIcon, SkypeIcon }
+export { MenuIcon, CloseIcon, LinkedinIcon, GithubIcon, SkypeIcon, ArrowUpIcon }

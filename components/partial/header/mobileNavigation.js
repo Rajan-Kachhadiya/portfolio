@@ -17,15 +17,15 @@ export default function MobileNavigation() {
         },
         {
             name: "Features",
-            url: "#",
+            url: "#features",
         },
         {
             name: "Portfolio",
-            url: "#",
+            url: "#portfolio",
         },
         {
             name: "Resume",
-            url: "#",
+            url: "#resume",
         },
         {
             name: "Blog",

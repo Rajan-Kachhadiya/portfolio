@@ -31,7 +31,7 @@ export default function Features() {
             </div>
             <div className="grid lg:grid-cols-3 gap-30">
                 {featuresItem.map((item, key) => (
-                    <div key={key} className="features-item-box max-w-[400px] mx-auto sm:p-50 p-30 cursor-pointer bg-gradient-box shadow-shadow-white rounded-[10px] relative inline-block w-full z-[2] text-secondary transition-all duration-[0.4s] before:transition-all before:duration-[0.4s] before:absolute before:content-[''] before:left-0 before:top-0 before:w-full before:h-full before:bg-gradient-box-hover before:z-[-1] before:rounded-md before:opacity-0 hover:before:opacity-100 hover:text-white hover:translate-y-[-3px]">
+                    <div key={key} className="features-item-box max-w-[400px] mx-auto sm:p-50 p-30 cursor-pointer bg-gradient-box shadow-shadow-white rounded-[10px] relative inline-block w-full z-[2] transition-all duration-[0.4s] before:transition-all before:duration-[0.4s] before:absolute before:content-[''] before:left-0 before:top-0 before:w-full before:h-full before:bg-gradient-box-hover before:z-[-1] before:rounded-md before:opacity-0 hover:before:opacity-100 hover:text-white hover:translate-y-[-3px]">
                         <div className="mb-30">
                             <item.icon />
                         </div>

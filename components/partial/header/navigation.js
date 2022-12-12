@@ -18,7 +18,7 @@ export default function Navigation() {
         },
         {
             name: "Resume",
-            url: "#",
+            url: "#resume",
         },
         {
             name: "Blog",

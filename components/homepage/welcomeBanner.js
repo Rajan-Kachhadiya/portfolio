@@ -37,7 +37,7 @@ export default function WelcomeBanner() {
           </div>
         </div>
         <div className=" lg:order-2 order-1 relative w-[70%] z-[2] after:absolute after:content-[''] after:w-full after:h-[calc(100%-20%)] after:z-[-1] after:bottom-0 after:rounded-md after:bg-gradient-box after:shadow-shadow-white">
-          <Image className="mx-auto" src={BannerImage} width="400" height="564" alt="Banner Image" />
+          <Image className="mx-auto" src={BannerImage} width="400" height="564" alt="Banner Image" priority />
         </div>
       </div>
     </div>

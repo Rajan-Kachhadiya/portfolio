@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../components/layout";
-import { WelcomeBanner, Features, Portfolio } from "../components/homepage";
+import { WelcomeBanner, Features, Portfolio, Resume } from "../components/homepage";
+import ScrollTop from "../components/partial/scrolltop";
 
 export default function Index() {
   return (
@@ -8,6 +9,8 @@ export default function Index() {
       <WelcomeBanner />
       <Features />
       <Portfolio />
+      <Resume />
+      <ScrollTop />
     </Layout>
   )
 }
