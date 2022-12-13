@@ -89,6 +89,10 @@
   box-sizing: border-box;
 }
 
+body.remove-scroll{
+  overflow: hidden;
+}
+
 .section-title {
   font-weight: 700;
   font-size: 60px;
