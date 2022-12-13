@@ -1,3 +1,4 @@
+import Footer from './partial/footer'
 import Header from './partial/header'
 
 export default function Layout({ children }) {
@@ -5,6 +6,7 @@ export default function Layout({ children }) {
     <>
       <Header />
       <main>{children}</main>
+      <Footer />
     </>
   )
 }

@@ -7,8 +7,14 @@ export default function MobileNavigation() {
     const [toggle, setToggle] = useState();
 
     const handleClick = () => {
+        if (toggle) {
+            document.body.classList.remove("remove-scroll");
+        } else {
+            document.body.classList.add("remove-scroll");
+        }
         setToggle(!toggle);
     };
+
 
     const navigationItem = [
         {
