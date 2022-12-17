@@ -12,10 +12,12 @@
     "eslint": "8.29.0",
     "eslint-config-next": "13.0.6",
     "next": "13.0.6",
+    "next-optimized-images": "^2.6.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-scroll-to-top": "^3.0.0",
-    "react-simple-typewriter": "^5.0.1"
+    "react-simple-typewriter": "^5.0.1",
+    "webp-loader": "^0.6.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

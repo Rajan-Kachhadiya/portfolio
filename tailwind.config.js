@@ -28,6 +28,7 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-box': "linear-gradient(145deg, #e2e8ec, #ffffff);",
+        'gradient-box-100': "linear-gradient(145deg, #e2e8ec, #ffffff);",
         'gradient-box-hover': "linear-gradient(145deg, #ff014f, #d11414);",
       },
       boxShadow: {
