@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/layout";
-import { WelcomeBanner, Features, Portfolio, Resume } from "../components/homepage";
+import { WelcomeBanner, Features, Portfolio, Resume, Contact } from "../components/homepage";
 import ScrollTop from "../components/partial/scrolltop";
 
 export default function Index() {
@@ -10,6 +10,7 @@ export default function Index() {
       <Features />
       <Portfolio />
       <Resume />
+      <Contact />
       <ScrollTop />
     </Layout>
   )

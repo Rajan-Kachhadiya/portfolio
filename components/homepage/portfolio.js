@@ -48,8 +48,8 @@ export default function Portfolio() {
             <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-x-30 gap-y-50">
                 {portfolioItem.map((item, key) => (
                     <div key={key} className="portfolio-item-box group sm:p-30 p-20 cursor-pointer bg-gradient-box shadow-shadow-white rounded-[20px]">
-                        <div className="mb-20 rounded-[10px] overflow-hidden md:max-w-auto max-w-max mx-auto">
-                            <Image className="group-hover:scale-110 transition duration-[0.4s]" src={item.image} width="355" height="266" alt="Portfolio Image" priority />
+                        <div className="mb-20 rounded-[10px] overflow-hidden">
+                            <Image className="group-hover:scale-110 transition duration-[0.4s] w-full" src={item.image} width="355" height="266" alt="Portfolio Image" priority />
                         </div>
                         <div className="mb-10 text-[12px] tracking-[1px] font-medium text-secondary">
                             {item.content}

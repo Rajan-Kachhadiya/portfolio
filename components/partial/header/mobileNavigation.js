@@ -35,7 +35,7 @@ export default function MobileNavigation() {
         },
         {
             name: "Contact",
-            url: "#",
+            url: "#contact",
         },
     ]
 
