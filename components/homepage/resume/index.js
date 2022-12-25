@@ -1,6 +1,10 @@
 import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import Education from "./education";
+import Experience from "./experience";
+import ProfessionalSkills from "./professionalSkills";
+import Profile from "./profile";
 
 export default function Resume() {
 
@@ -14,22 +18,22 @@ export default function Resume() {
             </div>
             <Tabs>
                 <TabList className="border-0 bg-gradient-box shadow-shadow-white rounded-[10px] flex md:flex-row flex-col justify-between items-center">
-                    <Tab className="lg:py-30 py-20 px-10 w-full text-center font-medium text-light-black lg:text-[18px] cursor-pointer rounded-[10px] transition-all duration-[0.4s] focus-visible:outline-0 hover:text-secondary hover:bg-gradient-box hover:shadow-shadow-white hover:rounded-[10px]">Education</Tab>
+                    <Tab className="lg:py-30 py-20 px-10 w-full text-center font-medium text-light-black lg:text-[18px] cursor-pointer rounded-[10px] transition-all duration-[0.4s] focus-visible:outline-0 hover:text-secondary hover:bg-gradient-box hover:shadow-shadow-white hover:rounded-[10px]">Profile</Tab>
                     <Tab className="lg:py-30 py-20 px-10 w-full text-center font-medium text-light-black lg:text-[18px] cursor-pointer rounded-[10px] transition-all duration-[0.4s] focus-visible:outline-0 hover:text-secondary hover:bg-gradient-box hover:shadow-shadow-white hover:rounded-[10px]">Professional Skills</Tab>
                     <Tab className="lg:py-30 py-20 px-10 w-full text-center font-medium text-light-black lg:text-[18px] cursor-pointer rounded-[10px] transition-all duration-[0.4s] focus-visible:outline-0 hover:text-secondary hover:bg-gradient-box hover:shadow-shadow-white hover:rounded-[10px]">Experience</Tab>
-                    <Tab className="lg:py-30 py-20 px-10 w-full text-center font-medium text-light-black lg:text-[18px] cursor-pointer rounded-[10px] transition-all duration-[0.4s] focus-visible:outline-0 hover:text-secondary hover:bg-gradient-box hover:shadow-shadow-white hover:rounded-[10px]">Interview</Tab>
+                    <Tab className="lg:py-30 py-20 px-10 w-full text-center font-medium text-light-black lg:text-[18px] cursor-pointer rounded-[10px] transition-all duration-[0.4s] focus-visible:outline-0 hover:text-secondary hover:bg-gradient-box hover:shadow-shadow-white hover:rounded-[10px]">Education</Tab>
                 </TabList>
                 <TabPanel>
-                    <h2>Education</h2>
+                    <Profile />
                 </TabPanel>
                 <TabPanel>
-                    <h2>Professional</h2>
+                    <ProfessionalSkills />
                 </TabPanel>
                 <TabPanel>
-                    <h2>Experience</h2>
+                    <Experience />
                 </TabPanel>
                 <TabPanel>
-                    <h2>Interview</h2>
+                    <Education />
                 </TabPanel>
             </Tabs>
             <style>{`
