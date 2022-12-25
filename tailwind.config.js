@@ -25,6 +25,7 @@ module.exports = {
         'light-black': '#1e2125',
         'secondary': '#ff014f',
         'primary': '#3c3e41',
+        'red': '#fe024e',
         'body-color': '#ECF0F3',
       },
       backgroundImage: {

@@ -20,7 +20,7 @@ export default function Contact() {
                         <Image className="group-hover:scale-110 transition duration-[0.4s] w-full" src={ContactImage} width="640" height="256" alt="Contact Image" priority />
                     </div>
                     <div className="md:text-[18px] font-medium text-primary/80 mb-50">
-                        <div className="md:mb-20 mb-15 sm:text-[30px] sm:leading-[37px] text-[24px] leading-[32px] font-bold text-light-black">
+                        <div className="md:mb-20 mb-15 md:text-[30px] md:leading-[37px] text-[24px] leading-[32px] font-bold text-light-black">
                             Rajan Kachhadiya
                         </div>
                         <div className="md:mb-20 mb-15">
