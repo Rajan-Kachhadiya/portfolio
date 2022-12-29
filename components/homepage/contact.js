@@ -1,11 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { ContactImage } from "/public/images";
 import Link from "next/link";
 import Findme from "../partial/findme"
+import { sendContactForm } from "../../lib/api";
+
+const initValues = { name: "", phone: "", email: "", subject: "", message: "" };
+
+const initState = { isLoading: false, error: "", values: initValues };
 
 export default function Contact() {
+    const [state, setState] = useState(initState);
+    const [touched, setTouched] = useState({});
 
+    const { values, isLoading, error } = state;
+
+    const onBlur = ({ target }) => {
+        setTouched((prev) => ({ ...prev, [target.name]: true }));
+    }
+
+    const handleChange = ({ target }) => {
+        console.log(target.value)
+        setState((prev) => ({
+            ...prev,
+            values: {
+                ...prev.values,
+                [target.name]: target.value,
+            },
+        }));
+    }
+
+    const onSubmit = async () => {
+        console.log(values)
+        setState((prev) => ({
+            ...prev,
+            isLoading: true,
+        }));
+        try {
+            // window.open(`mailto:${values.email}`,"_blank")
+            await sendContactForm(values);
+            setTouched({});
+            setState(initState);
+        } catch (error) {
+            setState((prev) => ({
+                ...prev,
+                isLoading: false,
+                error: error.message,
+            }));
+        }
+    };
     return (
         <div id="contact" className="container md:py-80 py-50 border-b border-gray">
             <div className="section-subtitle mb-15 text-center">
@@ -50,33 +93,68 @@ export default function Contact() {
                         <Findme />
                     </div>
                 </div>
-                <form className="sm:p-30 p-20 flex flex-col gap-20 bg-gradient-box shadow-shadow-white rounded-[20px]">
+                <form
+                    className="sm:p-30 p-20 flex flex-col gap-20 bg-gradient-box shadow-shadow-white rounded-[20px]"
+                >
                     <div className="flex items-center gap-30 lg:flex-row flex-col">
                         <div className="w-full">
                             <label htmlFor="name" className="block uppercase mb-10 text-[12px] leading-[22px] font-medium tracking-[1px]">Your Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your Name" className="block w-full border-2 border-gray-100 rounded-md px-15 py-10 focus-visible:outline-secondary" />
+                            <input
+                                type="text" id="name" name="name"
+                                placeholder="Your Name"
+                                className="block w-full border-2 border-gray-100 rounded-md px-15 py-10 focus-visible:outline-secondary"
+                                value={values.name}
+                                onBlur={onBlur}
+                                onChange={handleChange}
+                            />
                         </div>
                         <div className="w-full">
                             <label htmlFor="phone" className="block uppercase mb-10 text-[12px] leading-[22px] font-medium tracking-[1px]">Phone Number</label>
-                            <input type="number" id="phone" name="phone" placeholder="Phone Number" className="block w-full border-2 border-gray-100 rounded-md px-15 py-10 focus-visible:outline-secondary" />
+                            <input
+                                type="number" id="phone" name="phone" placeholder="Phone Number"
+                                className="block w-full border-2 border-gray-100 rounded-md px-15 py-10 focus-visible:outline-secondary"
+                                value={values.phone}
+                                onBlur={onBlur}
+                                onChange={handleChange}
+                            />
                         </div>
                     </div>
                     <div className="w-full">
                         <label htmlFor="email" className="block uppercase mb-10 text-[12px] leading-[22px] font-medium tracking-[1px]">Your Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your Email" className="block w-full border-2 border-gray-100 rounded-md px-15 py-10 focus-visible:outline-secondary" />
+                        <input
+                            type="email" id="email" name="email" placeholder="Your Email"
+                            className="block w-full border-2 border-gray-100 rounded-md px-15 py-10 focus-visible:outline-secondary"
+                            value={values.email}
+                            onBlur={onBlur}
+                            onChange={handleChange}
+                        />
                     </div>
                     <div className="w-full">
                         <label htmlFor="subject" className="block uppercase mb-10 text-[12px] leading-[22px] font-medium tracking-[1px]">Subject</label>
-                        <input type="text" id="subject" name="subject" placeholder="Subject" className="block w-full border-2 border-gray-100 rounded-md px-15 py-10 focus-visible:outline-secondary" />
+                        <input
+                            type="text" id="subject" name="subject" placeholder="Subject"
+                            className="block w-full border-2 border-gray-100 rounded-md px-15 py-10 focus-visible:outline-secondary"
+                            value={values.subject}
+                            onBlur={onBlur}
+                            onChange={handleChange}
+                        />
                     </div>
                     <div className="w-full">
                         <label htmlFor="message" className="block uppercase mb-10 text-[12px] leading-[22px] font-medium tracking-[1px]">Your Message</label>
-                        <textarea id="message" name="message" placeholder="Your Message" rows="7" cols="50" className="block w-full border-2 border-gray-100 rounded-md px-15 py-10 focus-visible:outline-secondary" />
+                        <textarea
+                            id="message" name="message" placeholder="Your Message" rows="7" cols="50"
+                            className="block w-full border-2 border-gray-100 rounded-md px-15 py-10 focus-visible:outline-secondary"
+                            value={values.message}
+                            onBlur={onBlur}
+                            onChange={handleChange}
+                        />
                     </div>
                     <div className="w-full">
-                        <Link href="#" className="relative inline-block w-full text-center uppercase font-semibold text-[13px] leading-[20px] z-[2] text-secondary px-20 py-15 rounded-md bg-gradient-box shadow-shadow-white transition-all duration-[0.4s] before:transition-all before:duration-[0.4s] before:absolute before:content-[''] before:left-0 before:top-0 before:w-full before:h-full before:bg-gradient-box-hover before:z-[-1] before:rounded-md before:opacity-0 hover:before:opacity-100 hover:text-white hover:translate-y-[-3px]">
+                        <button href="#" className="relative inline-block w-full text-center uppercase font-semibold text-[13px] leading-[20px] z-[2] text-secondary px-20 py-15 rounded-md bg-gradient-box shadow-shadow-white transition-all duration-[0.4s] before:transition-all before:duration-[0.4s] before:absolute before:content-[''] before:left-0 before:top-0 before:w-full before:h-full before:bg-gradient-box-hover before:z-[-1] before:rounded-md before:opacity-0 hover:before:opacity-100 hover:text-white hover:translate-y-[-3px]"
+                            disabled={!values.name || !values.phone || !values.email || !values.subject || !values.message}
+                            onClick={onSubmit}>
                             Send Message
-                        </Link>
+                        </button>
                     </div>
                 </form>
             </div>
