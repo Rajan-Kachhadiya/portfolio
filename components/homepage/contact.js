@@ -71,24 +71,24 @@ export default function Contact() {
                     <div className="flex items-center gap-30 lg:flex-row flex-col">
                         <div className="w-full">
                             <label htmlFor="name" className="block uppercase mb-10 text-[12px] leading-[22px] font-medium tracking-[1px]">Your Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your Name" className="block w-full border-2 border-gray-100 rounded-md px-15 py-10 focus-visible:outline-secondary" />
+                            <input type="text" id="name" name="name" placeholder="Your Name" required className="block w-full border-2 border-gray-100 rounded-md px-15 py-10 focus-visible:outline-secondary" />
                         </div>
                         <div className="w-full">
                             <label htmlFor="phone" className="block uppercase mb-10 text-[12px] leading-[22px] font-medium tracking-[1px]">Phone Number</label>
-                            <input type="number" id="phone" name="phone" placeholder="Phone Number" className="block w-full border-2 border-gray-100 rounded-md px-15 py-10 focus-visible:outline-secondary" />
+                            <input type="number" id="phone" name="phone" placeholder="Phone Number" required className="block w-full border-2 border-gray-100 rounded-md px-15 py-10 focus-visible:outline-secondary" />
                         </div>
                     </div>
                     <div className="w-full">
                         <label htmlFor="email" className="block uppercase mb-10 text-[12px] leading-[22px] font-medium tracking-[1px]">Your Email</label>
-                        <input type="email" id="email" name="email" placeholder="Your Email" className="block w-full border-2 border-gray-100 rounded-md px-15 py-10 focus-visible:outline-secondary" />
+                        <input type="email" id="email" name="email" placeholder="Your Email" required className="block w-full border-2 border-gray-100 rounded-md px-15 py-10 focus-visible:outline-secondary" />
                     </div>
                     <div className="w-full">
                         <label htmlFor="subject" className="block uppercase mb-10 text-[12px] leading-[22px] font-medium tracking-[1px]">Subject</label>
-                        <input type="text" id="subject" name="subject" placeholder="Subject" className="block w-full border-2 border-gray-100 rounded-md px-15 py-10 focus-visible:outline-secondary" />
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required className="block w-full border-2 border-gray-100 rounded-md px-15 py-10 focus-visible:outline-secondary" />
                     </div>
                     <div className="w-full">
                         <label htmlFor="message" className="block uppercase mb-10 text-[12px] leading-[22px] font-medium tracking-[1px]">Your Message</label>
-                        <textarea id="message" name="message" placeholder="Your Message" rows="7" cols="50" className="block w-full border-2 border-gray-100 rounded-md px-15 py-10 focus-visible:outline-secondary" />
+                        <textarea id="message" name="message" placeholder="Your Message" required rows="7" cols="50" className="block w-full border-2 border-gray-100 rounded-md px-15 py-10 focus-visible:outline-secondary" />
                     </div>
                     <button type="submit" className="relative inline-block w-full text-center uppercase font-semibold text-[13px] leading-[20px] z-[2] text-secondary px-20 py-15 rounded-md bg-gradient-box shadow-shadow-white transition-all duration-[0.4s] before:transition-all before:duration-[0.4s] before:absolute before:content-[''] before:left-0 before:top-0 before:w-full before:h-full before:bg-gradient-box-hover before:z-[-1] before:rounded-md before:opacity-0 hover:before:opacity-100 hover:text-white hover:translate-y-[-3px]">
                         Send Message
